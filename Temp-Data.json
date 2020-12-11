@@ -1,0 +1,82 @@
+[
+{ 
+    "Name" : "Sell Roti", 
+    "Region" : "Nepal", 
+    "Type" : "Dessert", 
+    "Vegeterian" : "TRUE", 
+    "Main Ingredients:" : null, 
+    "videoLink" : "0S_V9-rWSE8"
+},
+{ 
+    "Name" : "Tomato Rasam", 
+    "Region" : "South India", 
+    "Type" : "Soup", 
+    "Vegeterian" : "TRUE", 
+    "Main Ingredients:" : null, 
+    "videoLink" : "6ia_z07W350"
+},
+{ 
+    "Name" : "Kadi Pakoda", 
+    "Region" : "Punjab", 
+    "Type" : "Main Course", 
+    "Vegeterian" : "TRUE", 
+    "Main Ingredients:" : null, 
+    "videoLink" : "reELsbLp7Mc"
+},
+{ 
+    "Name" : "Okra (Lady Finger)", 
+    "Region" : "North India", 
+    "Type" : "Main Course", 
+    "Vegeterian" : "TRUE", 
+    "Main Ingredients:" : null, 
+    "videoLink" : "yaO05nO_4i0"
+},
+{ 
+    "Name" : "Chicken Drumstick", 
+    "Region" : "India", 
+    "Type" : "Appetizers", 
+    "Vegeterian" : "FALSE", 
+    "Main Ingredients:" : "Chicken", 
+    "videoLink" : "rJU2JQJ1fE8"
+},
+{ 
+    "Name" : "Jalebi", 
+    "Region" : "Entire India", 
+    "Type" : "Dessert", 
+    "Vegeterian" : false, 
+    "Main Ingredients:" : null, 
+    "videoLink" : "vBsb4XVbZEE"
+},
+{ 
+    "Name" : "Mutton Varhadi", 
+    "Region" : "Maharashtra", 
+    "Type" : "Main Course", 
+    "Vegeterian" : false, 
+    "Main Ingredients:" : "Mutton", 
+    "videoLink" : "FQmH_QhIA6M"
+},
+{ 
+    "Name" : "Ghaderi Curry", 
+    "Region" : "Kumaon", 
+    "Type" : "Main Course", 
+    "Vegeterian" : "TRUE", 
+    "Main Ingredients:" : null, 
+    "videoLink" : "9QccsSqeUSw"
+},
+{ 
+    "Name" : "Aloo Ke Gutke", 
+    "Region" : "Uttarakhand", 
+    "Type" : "Snack", 
+    "Vegeterian" : true, 
+    "Main Ingredients:" : null, 
+    "videoLink" : "YOVVZX2tEgk"
+},
+{ 
+    "Name" : "Pahadi Chilla", 
+    "Region" : "Uttarakhand", 
+    "Type" : "Breakfast", 
+    "Vegeterian" : true, 
+    "Main Ingredients:" : null, 
+    "videoLink" : "jI3pthanJyk"
+}
+]
