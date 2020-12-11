@@ -12,9 +12,6 @@ var connect=null;
 
 receipeRouter.use(bodyParser.json());
 
-var promise = null;
-
-
 receipeRouter.route('/')
 .all ((req, res, next) => {
 
@@ -47,14 +44,13 @@ receipeRouter.route('/')
 })
 .post((req, res, next) => {
         const receipe_filter = req.body.filter.filterCriteria;
-
-        console.log("=> Post Param : " + JSON.stringify(receipe_filter));
+        var mysort = { _id: -1 };
 
         connect.then((db) => {
 
             console.log('Connected Successfully');
     
-            Receipes.find(receipe_filter).then((receipes)=>{
+            Receipes.find(receipe_filter).sort(mysort).then((receipes)=>{
                     console.log('All Receipes' + receipes);
                     res.json({receipes});
                  }).catch ((err) => {
@@ -66,6 +62,42 @@ receipeRouter.route('/')
                 );
             }
         )
+
+
+});
+
+receipeRouter.route('/distinct')
+.all ((req, res, next) => {
+
+    connect = mongoose.connect(url);
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+
+    next();
+})
+.post((req, res, next) => {
+    const column_name = req.body.filter.column;
+    //const column_name = 'Region';
+    console.log("=> Post Param : " + JSON.stringify(column_name));
+
+    connect.then((db) => {
+
+        console.log('Connected Successfully');
+
+        Receipes.distinct(column_name).then((column_vals)=>{
+                console.log('All Col Values' + column_vals);
+                res.json({column_vals});
+             }).catch ((err) => {
+
+                    res.statusCode =400;
+                    res.send(err);
+                    console.log(err);
+                }
+            );
+        }
+    )
 
 
 });
