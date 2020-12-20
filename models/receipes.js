@@ -24,7 +24,7 @@ const receipeSchema = new Schema({
         type: Boolean,
         required : true
     },
-    mainIngredents : {
+    ingredents : {
 
         type: String,
         required : false
