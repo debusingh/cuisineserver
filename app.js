@@ -6,6 +6,8 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var dishRouter = require('./routes/receipeRouter');
+var userRouter = require('./routes/userRouter');
+
 var cors = require('cors');
 
 
@@ -25,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/dishes', dishRouter);
+app.use('/users', userRouter);
 
 
 

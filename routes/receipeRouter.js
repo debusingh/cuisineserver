@@ -3,10 +3,11 @@ const bodyParser = require ('body-parser');
 const receipeRouter = express.Router ();
 const mongoose = require('mongoose');
 const Receipes = require('../models/receipes');
+const ReceipesTemp = require('../models/receipesTemp');
 
 
-//const url='mongodb://localhost:27017/cuisine';
-const url='mongodb+srv://thecuisine:04Chaar04@cluster0.7j1pd.mongodb.net/cuisine'
+const url='mongodb://localhost:27017/cuisine';
+//const url='mongodb+srv://thecuisine:04Chaar04@cluster0.7j1pd.mongodb.net/cuisine'
 
 var connect=null;
 
@@ -62,6 +63,23 @@ receipeRouter.route('/')
                 );
             }
         )
+}).put((req, res, next) => {
+
+    connect.then((db) => {
+
+        var myData = new ReceipesTemp(req.body.tempData);
+        console.log('Body : ', req.body);
+
+        myData.save().then((item)=>{ res.send(item)
+             }).catch ((err) => {
+
+                    res.statusCode =400;
+                    res.send(err);
+                    console.log(err);
+                }
+            );
+        }
+    )
 
 
 });
