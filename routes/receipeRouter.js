@@ -6,8 +6,8 @@ const Receipes = require('../models/receipes');
 const ReceipesTemp = require('../models/receipesTemp');
 
 
-const url='mongodb://localhost:27017/cuisine';
-//const url='mongodb+srv://thecuisine:04Chaar04@cluster0.7j1pd.mongodb.net/cuisine'
+//const url='mongodb://localhost:27017/cuisine';
+const url='mongodb+srv://thecuisine:04Chaar04@cluster0.7j1pd.mongodb.net/cuisine'
 
 var connect=null;
 
