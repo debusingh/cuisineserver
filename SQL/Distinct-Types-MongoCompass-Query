@@ -1,0 +1,11 @@
+[{$project: {
+  types: {$split: ["$Type",", "  ]}
+}}, {$unwind: {
+  path: "$types",
+  includeArrayIndex: 'string',
+  preserveNullAndEmptyArrays: true
+}}, {$group: {
+  _id: null,
+  unique_type: {
+      $addToSet: '$types'  }
+}}]

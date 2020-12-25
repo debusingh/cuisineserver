@@ -22,8 +22,7 @@ userRouter.route('/user')
     res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
 
     next();
-  })
-  .post((req, res, next) => {
+  }).post((req, res, next) => {
     const user_filter = req.body.user;
     try {
       connect.then((db) => {
@@ -69,8 +68,5 @@ userRouter.route('/user')
       console.log(err);
     }
   });
-
-
-
 
 module.exports = userRouter;
